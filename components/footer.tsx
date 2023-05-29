@@ -99,7 +99,6 @@ const Footer = () => {
                 data-infinitescroll="true"
                 data-personalization-id={1047512}
                 style={{
-                  WebkitOverflowScrolling: "",
                   height: "40vh",
                   width: "100%",
                   position: "relative",
@@ -114,11 +113,8 @@ const Footer = () => {
                     src="https://cdn.hypemarks.com/t/teamtrees_1?width=992&expand=true&infiniteScroll=true&personalization_id=1047512"
                     style={{ border: "none", height: "100%", width: "100%" }}
                     scrolling="yes"
-                    frameBorder={0}
-                    allowTransparency="true"
                     title="Social Feed"
                     data-embed-id
-                    className
                   />
                 </div>
               </div>
