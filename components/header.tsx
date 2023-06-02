@@ -1,116 +1,129 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
-import { BiMenu } from "react-icons/bi";
-const Header = () => {
-  const menuRef = useRef<HTMLDivElement>(null);
+import React, { useEffect, useRef } from "react";
 
-  const handleToggleMenu = () => {
-    if (menuRef.current) {
-      menuRef.current.classList.toggle("menu__hidden");
-    }
-  };
+const Header = () => {
+  const totalTrees = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    let count = 100000;
+    const idTimeTerval = setInterval(() => {
+      count++;
+      if (totalTrees.current) {
+        totalTrees.current.textContent = count.toLocaleString("en-vi");
+      }
+    }, 1000);
+    return () => {
+      clearInterval(idTimeTerval);
+    };
+  }, []);
   return (
-    <header className="static">
+    <header className="relative text-white  md:mb-[300px]">
+      <div className="absolute inset-0 bg-spruce" />
       <div
-        onClick={handleToggleMenu}
-        className="absolute  border border-[#5c5a5a] inline-flex  p-2.5 bg-white hover:bg-primary hover:text-white rounded-full ineline-flex items-center  top-4 right-4  justify-center cursor-pointer"
-      >
-        <BiMenu className="text-2xl" />
-      </div>
-      <div
-        ref={menuRef}
-        onClick={handleToggleMenu}
-        style={{ zIndex: 100 }}
-        className="fixed menu__hidden right-0 top-0 w-full md:w-1/2 lg:w-1/3 max-w-lg h-full bg-menu x-4 pl-8  transition-all duration-200 transform"
-      >
-        <div className="absolute inline-flex  py-2.5 px-4 bg-white hover:bg-primary hover:text-white rounded-full ineline-flex items-center  top-4 right-4  justify-center cursor-pointer">
-          <span className="text-xl block" aria-hidden="true">
-            ×
-          </span>
-        </div>
-        <div className="flex-1 flex flex-col items-start mt-14 ">
-          <div className="relative">
+        className="absolute  inset-0"
+        style={{ backgroundImage: 'url("/images/stars.png")' }}
+      />
+      <div className="absolute  inset-0 bg-gradient-to-b from-transparent to-sky" />
+      <div className="relative  pb-24 md:pb-48">
+        <div className="bg-[#B4DBE1] text-[#0B447D] py-4 px-2 w-full flex flex-col md:flex-row items-center justify-center">
+          <p className="text-spruce text-center font-bold text-sm">
+            20 million+ trees are in the ground! Check out our{" "}
+            <a href="#planting-projects" className="font-black underline">
+              updated planting locations
+            </a>{" "}
+            in partnership with the{" "}
             <a
-              href="#home"
-              className="block text-xl md:text-3xl text-white font-black uppercase"
+              href="https://www.arborday.org/"
+              className="font-black underline"
+              target="_blank"
             >
-              Home
+              Arbor Day Foundation
             </a>
-            <Image
-              src="/images/leaf.png"
-              width="50"
-              height="50"
-              alt="Node have"
-              className="absolute w-8 top-0 left-0 ml-24 -mt-2"
-            />
-          </div>
-          <a
-            href="#section-donate"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Join #TeamTrees
-          </a>
-          <a
-            href="#leaderboard"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Leaderboard
-          </a>
-          <a
-            href="#social-feed"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Social
-          </a>
-          <a
-            href="#planting-projects"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Planting Projects
-          </a>
-          <a
-            href="https://shop.teamtrees.org"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Store
-          </a>
+            .
+          </p>
         </div>
-        <div className="transform -rotate-6  mt-12 flex flex-col items-center justify-center  w-64">
-          <div
-            className="bg-primary rounded-full  flex items-center align-center flex-col gap-2 py-3 relative"
-            style={{ maxWidth: 240 }}
-          >
-            <div className="flex flex-wrap  items-center">
-              <div className="text-center">
-                <Image
-                  src="/images/leaf.png"
-                  width="50"
-                  height="50"
-                  alt="Node have"
-                  className="absolute w-8 top-0 left-0 ml-24 -mt-2"
-                />
-              </div>
-              <div className="px-4 flex  items-center justify-center ">
-                <Image
-                  src="/images/trophy-check.png"
-                  width="20"
-                  height="20"
-                  alt="Node have"
-                />
-                <p className="text-white text-sm">
-                  20 million trees are in the ground!
-                </p>
-              </div>
-            </div>
-            <div className="bg-second min-w-[150px] px-2 py-1 absolute top-full -translate-y-1/2 -translate-x-1/2 left-3/4  rounded-full  text-right achieve-goal">
-              <p className="text-white text-xs uppercase tracking-wider">
-                Original Goal Met
-              </p>
+        <div className="flex flex-col h-full items-center justify-center pt-4 md:pt-16">
+          <div className="flex flex-row justify-around w-full px-4">
+            <div className="w-12 h-12 " />
+            <div
+              id="hero-logo"
+              className="flex-1 flex items-center justify-center mr-12"
+            >
+              <Image
+                alt="avata"
+                width={300}
+                height={75}
+                src="/images/logo.png"
+                className="h-8 md:h-20"
+              />
             </div>
           </div>
+          <h1 className="mt-12 text-5xl lg:text-5xl text-white font-black uppercase text-center leading-2">
+            Join the movement!
+          </h1>
+          <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start w-full max-w-screen-xl">
+            <div className="flex-1 items-start justify-start">
+              <div className="transform -rotate-6 my-8 mb-4 lg:my-0 lg:mb-0 max-w-xs pl-12 pb-6">
+                <Image
+                  alt="test"
+                  width={100}
+                  height={100}
+                  src="/images/astronaut-heart-trees.png"
+                  className="absolute left-0 -ml-4 xl:-ml-8 top-0 w-16 xl:w-24 object-contain"
+                />
+                <div className="relative mx-auto w-64 xl:w-auto">
+                  <Image
+                    alt="test"
+                    width={140}
+                    height={140}
+                    src="/images/jimmy-and-mark-round-badge-transparent.png"
+                    className="w-56 xl:w-auto md:pl-6 md:pr-6 mx-auto"
+                  />
+                  <div className="absolute top-[130px] bg-primary rounded-full py-2 px-4 items-center">
+                    <div className="flex gap-2">
+                      <Image
+                        src="/images/trophy-check-animated.gif"
+                        width={40}
+                        height={45}
+                        alt="gif"
+                      />
+                      <p className="text-sm">
+                        20 million trees are in the ground!
+                      </p>
+                    </div>
+                    <p className="absolute right-0  top-5/6 bg-second rounded-full py-1 px-3 text-sm">
+                      ORIGINAL GOAL MET
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p
+              className="mt-4 px-4 text-white font-medium max-w-xl text-center text-sm md:text-lg lg:text-xl  md:mt-8"
+              style={{ flex: 2 }}
+            >
+              The team is growing every day and scoring wins for the planet.
+              Plant with us and track our progress!
+            </p>
+            <div className="flex-1 hidden md:block" />
+          </div>
+
+          <h2
+            ref={totalTrees}
+            data-count={24419894}
+            className="counter text-6xl sm:text-8xl lg:text-hero font-black pb-24 md:pb-0"
+          >
+            0
+          </h2>
         </div>
       </div>
+      <Image
+        width={1400}
+        height={400}
+        alt="big-header"
+        src="/images/header.png"
+        className=" block min-h-[400px]    absolute bottom-0 left-0 right-0 top-[90%]  w-screen  z-10 -mt-40"
+      />
     </header>
   );
 };
