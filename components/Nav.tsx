@@ -11,7 +11,7 @@ const Nav = () => {
     }
   };
   return (
-    <header className="fixed right-2 top-2 z-[50]">
+    <nav className="fixed right-2 top-2 z-[50]">
       <div
         onClick={handleToggleMenu}
         className="absolute z-[51]  border border-[#5c5a5a] inline-flex  p-2.5 bg-white hover:bg-primary hover:text-white rounded-full ineline-flex items-center  top-4 right-4  justify-center cursor-pointer"
@@ -111,7 +111,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 

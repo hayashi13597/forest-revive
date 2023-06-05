@@ -3,6 +3,8 @@
 @tailwind utilities;
 body {
   overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth !important;
 }
 .menu__hidden {
   right: -600px;

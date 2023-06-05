@@ -1,8 +1,28 @@
-export async function GET(request: Request) {}
+import { NextResponse } from "next/server";
+import connectMongoDB from "../../services/database/conectMongoose";
+import userSchema from "../../services/models/userModel";
+export async function GET(request: Request) {
+  try {
+    await connectMongoDB();
+    const listDonations = await userSchema.find({}).sort({ updatedAt: -1 });
+    console.log(listDonations);
+    return NextResponse.json(listDonations);
+  } catch {}
+}
 
 export async function HEAD(request: Request) {}
 
-export async function POST(request: Request) {}
+export async function POST(request: Request) {
+  try {
+    const data = await request.json();
+    await connectMongoDB();
+    const result = await userSchema.create(data);
+    console.log(result);
+    return NextResponse.json(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 export async function PUT(request: Request) {}
 

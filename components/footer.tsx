@@ -7,7 +7,7 @@ const Footer = () => {
       <div id="social-feed">
         <div className="bg-spruce py-32">
           <h3 className="text-white text-3xl md:text-6xl font-black text-center uppercase">
-            #TeamTrees Social
+            #TeamTKWEB Builder
           </h3>
           <div className="flex flex-row items-center mt-4 justify-center">
             <a

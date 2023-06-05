@@ -27,17 +27,14 @@ const Header = () => {
       <div className="relative  pb-24 md:pb-48">
         <div className="bg-[#B4DBE1] text-[#0B447D] py-4 px-2 w-full flex flex-col md:flex-row items-center justify-center">
           <p className="text-spruce text-center font-bold text-sm">
-            20 million+ trees are in the ground! Check out our{" "}
-            <a href="#planting-projects" className="font-black underline">
-              updated planting locations
-            </a>{" "}
-            in partnership with the{" "}
+            Chung tay gây quỹ trồng 20.000 cây xanh đô thị chống biến đổi khí
+            hậu và hạn chế ô nhiễm môi trường đồng hành cùng
             <a
               href="https://www.arborday.org/"
-              className="font-black underline"
+              className="font-black underline ml-2 inline-block"
               target="_blank"
             >
-              Arbor Day Foundation
+              GreentViet
             </a>
             .
           </p>
@@ -58,8 +55,10 @@ const Header = () => {
               />
             </div>
           </div>
-          <h1 className="mt-12 text-5xl lg:text-5xl text-white font-black uppercase text-center leading-2">
-            Join the movement!
+          <h1 className="mt-12 text-5xl lg:text-5xl text-primary font-black uppercase text-center leading-2">
+            TÔN VINH MÔI TRƯỜNG
+            <br />
+            BẰNG CÂY XANH
           </h1>
           <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start w-full max-w-screen-xl">
             <div className="flex-1 items-start justify-start">
@@ -87,12 +86,10 @@ const Header = () => {
                         height={45}
                         alt="gif"
                       />
-                      <p className="text-sm">
-                        20 million trees are in the ground!
-                      </p>
+                      <p className="text-sm">400 cây xanh sẽ được trồng!</p>
                     </div>
                     <p className="absolute right-0  top-5/6 bg-second rounded-full py-1 px-3 text-sm">
-                      ORIGINAL GOAL MET
+                      Mục tiêu tương lai
                     </p>
                   </div>
                 </div>
@@ -102,8 +99,11 @@ const Header = () => {
               className="mt-4 px-4 text-white font-medium max-w-xl text-center text-sm md:text-lg lg:text-xl  md:mt-8"
               style={{ flex: 2 }}
             >
-              The team is growing every day and scoring wins for the planet.
-              Plant with us and track our progress!
+              Phá vỡ vòng luẩn quẩn đói nghèo và tàn phá môi trường. Với sự giúp
+              đỡ của bạn Yêu Cây Vì Tương Lai Tươi Sáng
+              <br />
+              <br />
+              Yêu Cây Vì Tương Lai Tươi Sáng
             </p>
             <div className="flex-1 hidden md:block" />
           </div>
