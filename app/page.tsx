@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 import Influence from "@/components/Influence";
