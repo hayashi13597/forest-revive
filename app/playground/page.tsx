@@ -15,9 +15,11 @@ const Playground = () => {
     totalPrice: 0,
   });
   const navigate = useRouter();
-  const userInfo = localStorage.getItem("access");
-  if (userInfo !== "Admin") {
-    navigate.push("/login");
+  if (typeof window !== "undefined") {
+    const userInfo = localStorage.getItem("access");
+    if (userInfo !== "Admin") {
+      navigate.push("/login");
+    }
   }
   React.useEffect(() => {
     fetch("/api")

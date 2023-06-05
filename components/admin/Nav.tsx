@@ -7,9 +7,11 @@ import { usePathname, useRouter } from "next/navigation";
 
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const [userInfo, setuserInfo] = useState(
+    typeof window !== "undefined" ? localStorage.access : "Admin"
+  );
   const pathname = usePathname();
   const router = useRouter();
-  const userInfo = localStorage.getItem("access");
   const handleClick = () => {
     setToggle(!toggle);
   };

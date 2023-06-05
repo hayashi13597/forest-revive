@@ -15,9 +15,11 @@ interface IUsers {
 const Dashboard = () => {
   const [users, setUsers] = useState<IUsers[]>();
   const navigate = useRouter();
-  const userInfo = localStorage.getItem("access");
-  if (userInfo !== "Admin") {
-    navigate.push("/login");
+  if (typeof window !== "undefined") {
+    const userInfo = localStorage.getItem("access");
+    if (userInfo !== "Admin") {
+      navigate.push("/login");
+    }
   }
   useEffect(() => {
     fetch("/api")
