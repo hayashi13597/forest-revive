@@ -5,7 +5,7 @@ export async function GET(request: Request) {
   try {
     await connectMongoDB();
     const listDonations = await userSchema.find({}).sort({ updatedAt: -1 });
-    console.log(listDonations);
+    // console.log(listDonations);
     return NextResponse.json(listDonations);
   } catch {}
 }
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     const data = await request.json();
     await connectMongoDB();
     const result = await userSchema.create(data);
-    console.log(result);
+    // console.log(result);
     return NextResponse.json(data);
   } catch (err) {
     console.log(err);
