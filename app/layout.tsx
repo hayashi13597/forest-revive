@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Donate",
-  description: "Donate",
+  title: "Foreres Revice - Phục hồi tài nguyên rừng",
+  description: "Foreres Revice - Phục hồi tài nguyên rừng",
 };
 
 export default function RootLayout({

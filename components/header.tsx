@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 const Header = () => {
   const totalTrees = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    let count = 100000;
+    let count = 0;
     const idTimeTerval = setInterval(() => {
       count++;
       if (totalTrees.current) {
@@ -50,7 +50,7 @@ const Header = () => {
                 alt="avata"
                 width={300}
                 height={75}
-                src="/images/logo.png"
+                src="/images/logologo.png"
                 className="h-8 md:h-20"
               />
             </div>
@@ -75,10 +75,10 @@ const Header = () => {
                     alt="test"
                     width={140}
                     height={140}
-                    src="/images/jimmy-and-mark-round-badge-transparent.png"
+                    src="/images/bg-logo_people.png"
                     className="w-56 xl:w-auto md:pl-6 md:pr-6 mx-auto"
                   />
-                  <div className="absolute top-[130px] bg-primary rounded-full py-2 px-4 items-center">
+                  <div className="absolute top-[148px] bg-primary rounded-full py-2 px-4 items-center">
                     <div className="flex gap-2">
                       <Image
                         src="/images/trophy-check-animated.gif"

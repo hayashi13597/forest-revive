@@ -14,7 +14,7 @@ const LeaderBoard: FC<LeaderBoardProps> = ({ listUser }) => {
   };
   const listUserCover = listUser.slice(page - 1, page * limitPage);
   return (
-    <section className="mt-20 text-center">
+    <section id="section-donate" className="mt-20 text-center">
       <h1 className="text-white  text-2xl sm:text-4xl mb-16 font-bold ">
         Danh sách người ủng hộ
       </h1>

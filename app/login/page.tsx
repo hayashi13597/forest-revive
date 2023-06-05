@@ -33,6 +33,8 @@ const Login = () => {
           <Image
             className="mx-auto h-10 w-auto"
             src="/images/tree-group.png"
+            width={10}
+            height={10}
             alt="Logo"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

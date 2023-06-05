@@ -145,16 +145,16 @@ const Footer = () => {
               href="mailto:info@teamtrees.org"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
-              Contact Us
+              Liên hệ
             </a>
             <a
               href="mailto:press@teamtrees.org"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
-              Press Inquiries
+              Yêu cầu báo chí
             </a>
             <a
-              href="https://teamseas.org/"
+              href=""
               target="_blank"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >

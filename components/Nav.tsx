@@ -11,7 +11,7 @@ const Nav = () => {
     }
   };
   return (
-    <nav className="fixed right-2 top-2 z-[50]">
+    <nav className="fixed right-2 top-2 z-[99999]">
       <div
         onClick={handleToggleMenu}
         className="absolute z-[51]  border border-[#5c5a5a] inline-flex  p-2.5 bg-white hover:bg-primary hover:text-white rounded-full ineline-flex items-center  top-4 right-4  justify-center cursor-pointer"
@@ -35,7 +35,7 @@ const Nav = () => {
               href="#home"
               className="block text-xl md:text-3xl text-white font-black uppercase"
             >
-              Home
+              Trang chủ
             </a>
             <Image
               src="/images/leaf.png"
@@ -46,34 +46,28 @@ const Nav = () => {
             />
           </div>
           <a
+            href="#top-up"
+            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
+          >
+            Tham gia #TKW
+          </a>
+          <a
             href="#section-donate"
             className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
           >
-            Join #TeamTrees
-          </a>
-          <a
-            href="#leaderboard"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Leaderboard
+            Danh sách hỗ trợ
           </a>
           <a
             href="#social-feed"
             className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
           >
-            Social
+            Truyền thông
           </a>
           <a
             href="#planting-projects"
             className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
           >
-            Planting Projects
-          </a>
-          <a
-            href="https://shop.teamtrees.org"
-            className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
-          >
-            Store
+            Kế hoạch
           </a>
         </div>
         <div className="transform -rotate-6  mt-12 flex flex-col items-center justify-center  w-64">
@@ -99,13 +93,13 @@ const Nav = () => {
                   alt="Node have"
                 />
                 <p className="text-white text-sm">
-                  20 million trees are in the ground!
+                  400 cây xanh sẽ được trồng!
                 </p>
               </div>
             </div>
             <div className="bg-second min-w-[150px] px-2 py-1 absolute top-full -translate-y-1/2 -translate-x-1/2 left-3/4  rounded-full  text-right achieve-goal">
               <p className="text-white text-xs uppercase tracking-wider">
-                Original Goal Met
+                Mục tiêu tương lai
               </p>
             </div>
           </div>

@@ -11,41 +11,24 @@ const Influence = () => {
             giải quyết nó.
           </h1>
           <p className="text-lg mt-20 font-medium text-[#808080]">
-            Đây là kết quả của những nỗ lực của chúng tôi để trồng lại hành
+            Đây là kết quả của những nỗ lực của cộng đồng để trồng lại hành
             tinh.
           </p>
-          <div className="grid grid-cols-2 px-12">
-            <ul>
+          <div className=" px-12">
+            <ul className="grid sm:grid-cols-2 grid-cols-1">
               <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
+                <p>~4,000</p>
                 <p>Cây trồng</p>
               </li>
               <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
-                <p>Thành viên nhóm Net Zero</p>
+                <p>~24.000</p>
+                <p>Tấn C02 bù đắp</p>
               </li>
               <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
-                <p>Cây được trồng qua Api</p>
+                <p>1.000</p>
+                <p>Đã gửi mail quà tặng</p>
               </li>
             </ul>
-            <ul>
-              <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
-                <p>
-                  Tấn Co <sub>2</sub> bù đắp
-                </p>
-              </li>
-              <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
-                <p>Sản phẩm không có mạng</p>
-              </li>
-              <li className="mt-4 text-left text-base font-semibold">
-                <p>30.772.623</p>
-                <p>Đã gửi email quà tặng</p>
-              </li>
-            </ul>
-            <div></div>
           </div>
         </div>
         <figure>

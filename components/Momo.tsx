@@ -1,36 +1,57 @@
+import { IUserDonation } from "@/app/page";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const Momo = () => {
+  const [listDonation, setListDonations] = useState<IUserDonation[]>([]);
+  const Sum = useMemo(() => {
+    return listDonation.reduce(
+      (acc, item) => {
+        acc.totalMoney += Number(item.totalPrice) * Number(item.amount);
+        acc.totalTrees += Number(item.amount);
+        return acc;
+      },
+      { totalMoney: 0, totalTrees: 0 }
+    );
+  }, [listDonation]);
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("/api");
+      const data = await res.json();
+      console.log(data);
+      setListDonations(data);
+    })();
+  }, []);
   return (
-    <div className="flex justify-center text-white">
+    <div id="top-up" className="flex justify-center text-white">
       <div className="w-[587px]  text-base pt-14 pb-4 px-8 text-left">
         <section>
           <h2 className="text-3xl mb-4 text-center ">Thông tin quyên góp</h2>
 
           <p className="text-sm text-center text-gray-400">
-            400,000 đ/ 2.000.000đ
+            {Sum.totalMoney.toFixed(0)},000 đ/ 2.000.000đ
           </p>
           <div className="w-full bg-gray-200 rounded-full dark:bg-gratext-gray-400">
             <div
               className="bg-momo text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-              style={{ width: `45%` }}
+              style={{ width: `${(Sum.totalMoney * 100) / 2000}%` }}
             >
-              45%
+              {((Sum.totalMoney * 100) / 2000).toFixed(2)}.%
             </div>
           </div>
           <div className="grid grid-cols-3 text-center my-4">
             <div>
               <p className=" text-gray-400">Lượt quyên góp</p>
-              <p>10</p>
+              <p>{listDonation.length}</p>
             </div>
             <div>
               <p className=" text-gray-400">Đạt được </p>
-              <p>10</p>
+              <p>{Sum.totalTrees}</p>
             </div>
             <div>
               <p className=" text-gray-400">Thời hạn</p>
-              <p>10</p>
+              <p>30</p>
             </div>
           </div>
           <div className="flex justify-center items-center">
@@ -38,9 +59,9 @@ const Momo = () => {
               Quyên góp
             </button>
           </div>
-          <hr className="h-2 bg-gray-600" />
-          <p className="mt-8">Đồng hành cùng dự án</p>
-          <div className="flex gap-2">
+          <hr className="h-2 bg-gray-600 " />
+          <p className="mt-8 text-center">Đồng hành cùng dự án</p>
+          <div className="flex items-center justify-center  gap-2">
             <Image
               src="/images/greenviet.png"
               width={85}
@@ -61,7 +82,13 @@ const Momo = () => {
           />
           <div className="absolute  right-12 top-16">
             <div className="w-[195px] h-[188px] bg-red-600">
-              Kiếm mã qr gắn vô đây
+              <Image
+                src="/images/momoqr.png"
+                alt="dasdsa"
+                width={195}
+                height={188}
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
