@@ -11,7 +11,7 @@ const Playground = () => {
     fullname: "",
     email: "",
     amount: 0,
-    message: "",
+    message: "Ủng hộ dự án",
     totalPrice: 0,
   });
   const navigate = useRouter();

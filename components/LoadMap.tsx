@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Skeleton } from "@mui/material";
 interface Coordinates {
@@ -19,6 +19,13 @@ interface Location {
   latitude: number;
   longitude: number;
 }
+
+const myIcon = new L.Icon({
+  iconUrl: "/images/marker-icon.png",
+  iconRetinaUrl: "/images/marker-icon.png",
+  popupAnchor: [-0, -0],
+  iconSize: [32, 45],
+});
 
 const LoadMap = () => {
   const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
@@ -77,19 +84,22 @@ const LoadMap = () => {
             className="w-full h-80"
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[coordinates.latitude, coordinates.longitude]}>
+            <Marker
+              icon={myIcon}
+              position={[coordinates.latitude, coordinates.longitude]}
+            >
               <Popup>
                 Vị trí của bạn <br />
               </Popup>
             </Marker>
 
-            <Marker position={address2}>
+            <Marker icon={myIcon} position={address2}>
               <Popup>
                 Vị trí của Team building
                 <br />
               </Popup>
             </Marker>
-            <Marker position={address3}>
+            <Marker icon={myIcon} position={address3}>
               <Popup>
                 Nhà trường
                 <br />

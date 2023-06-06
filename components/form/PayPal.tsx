@@ -32,8 +32,9 @@ const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
       const account = {
         totalPrice,
         email: info.email_address,
-        fullname:
-          `${info.name.surname}  ${info.name.middle_name} ${info.name.given_name} `.toLowerCase(),
+        fullname: `${info.name.surname}  ${info.name.middle_name || ""} ${
+          info.name.given_name
+        } `.toLowerCase(),
       };
       callback(account);
     });
