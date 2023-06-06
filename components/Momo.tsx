@@ -83,7 +83,7 @@ const Momo = () => {
           <div className="absolute  right-12 top-16">
             <div className="w-[195px] h-[188px] bg-red-600">
               <Image
-                src="/images/momoqr.png"
+                src="/images/anhmomo.png"
                 alt="dasdsa"
                 width={195}
                 height={188}
