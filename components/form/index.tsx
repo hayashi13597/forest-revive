@@ -32,6 +32,10 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
       setErrors("Vui lòng đúng định dạng");
     }
   };
+  const handleSetAmount = (amount: string) => {
+    setAmount(amount);
+    setIsShowPayMent(false);
+  };
   const hanleInfopmation = async (account: TypeAccount) => {
     setIsloading(true);
     const InfoDonate = {
@@ -76,7 +80,7 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
         <div className="grid grid-cols-2 gap-4 px-4 mt-12">
           <button
             type="button"
-            onClick={() => setAmount("5")}
+            onClick={() => handleSetAmount("5")}
             className={`bg-[#EDF2F7]  py-4 w-full rounded-xl ${
               amount == "5" ? "bg-menu text-white" : "bf-[#eff2f7"
             }`}
@@ -85,7 +89,7 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
           </button>
           <button
             type="button"
-            onClick={() => setAmount("10")}
+            onClick={() => handleSetAmount("10")}
             className={`bg-[#EDF2F7]  py-4 w-full rounded-xl ${
               amount == "10" ? "bg-menu text-white" : "bf-[#eff2f7"
             }`}
@@ -94,7 +98,7 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
           </button>
           <button
             type="button"
-            onClick={() => setAmount("15")}
+            onClick={() => handleSetAmount("15")}
             className={`bg-[#EDF2F7]  py-4 w-full rounded-xl ${
               amount == "15" ? "bg-menu text-white" : "bf-[#eff2f7"
             }`}
@@ -103,7 +107,7 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
           </button>
           <button
             type="button"
-            onClick={() => setAmount("20")}
+            onClick={() => handleSetAmount("20")}
             className={`bg-[#EDF2F7]  py-4 w-full rounded-xl ${
               amount == "20" ? "bg-menu text-white" : "bf-[#eff2f7"
             }`}
@@ -112,8 +116,8 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
           </button>
           <input
             type="text"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            // value={amount}
+            onChange={(e) => handleSetAmount(e.target.value)}
             className="col-span-2 bg-[#EDF2F7] py-2   w-full  px-4 focus-within:bg-menu focus-within:text-white rounded-xl border"
             placeholder="Nhập số cây khác"
           />
@@ -137,10 +141,12 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
           </button>
         )}
         {isShowaypal && amount && (
-          <PayPalContainer
-            amount={Number(amount)}
-            callback={hanleInfopmation}
-          />
+          <div className="px-4">
+            <PayPalContainer
+              amount={Number(amount)}
+              callback={hanleInfopmation}
+            />
+          </div>
         )}
       </form>
     </section>
