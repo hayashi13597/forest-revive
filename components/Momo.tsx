@@ -7,7 +7,7 @@ const Momo = () => {
   const Sum = useMemo(() => {
     return listDonation.reduce(
       (acc, item) => {
-        acc.totalMoney += Number(item.totalPrice)* 23 * Number(item.amount);
+        acc.totalMoney += Number(item.totalPrice) * 23;
         acc.totalTrees += Number(item.amount);
         return acc;
       },
