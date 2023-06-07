@@ -1,0 +1,9 @@
+.text_over-effect {
+  max-hegiht: 0;
+  transition: height 0.3s ease-in-out;
+}
+.text_over-effect.hidden_effect {
+  max-hegiht: 500px;
+
+  transition: max-height 0.25s ease-in;
+}

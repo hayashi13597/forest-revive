@@ -14,8 +14,14 @@ interface FormControllerProps {
     type: string;
     payload: IUserDonation;
   }>;
+  setRerender(rerender: boolean): void;
+  rerender: boolean;
 }
-const FormController: FC<FormControllerProps> = ({ dispatch }) => {
+const FormController: FC<FormControllerProps> = ({
+  dispatch,
+  rerender,
+  setRerender,
+}) => {
   const [amount, setAmount] = useState<string>("5");
   const [message, setMessage] = useState<string>("");
   const [isShowaypal, setIsShowPayMent] = useState<boolean>(false);
@@ -56,8 +62,9 @@ const FormController: FC<FormControllerProps> = ({ dispatch }) => {
         setMessage("");
         setIsShowPayMent(false);
         dispatch({ type: "add", payload: data });
-        console.log(data);
+
         toast.success("Thanh toán thành công!");
+        setRerender(!rerender);
       })
       .finally(() => {
         setIsloading(false);

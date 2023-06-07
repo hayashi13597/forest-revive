@@ -7,7 +7,7 @@ import BlogContainer from "./blog";
 
 const Plant = () => {
   return (
-    <section className="mt-[100px] text-white text-center">
+    <section className="mt-[100px] text-white text-center ">
       <div className="px-20">
         <h2 className="font-bold sm:text-5xl text-2xl">
           Dự án trồng cây xanh bảo vệ môi trường

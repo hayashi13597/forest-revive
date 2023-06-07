@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import LayoutProvider from "@/components/LayoutProvider";
 
 import ComponentTogether from "@/components/ComponentTogether";
+import { useState } from "react";
 export interface IUserDonation extends TypeAccount {
   amount: string;
   message: string;
@@ -17,6 +18,7 @@ export interface IUserDonation extends TypeAccount {
 }
 
 export default function Home() {
+  const [rerender, setRerender] = useState<boolean>(false);
   return (
     <div className=" bg-menu">
       <PayPalScriptProvider
@@ -28,7 +30,7 @@ export default function Home() {
         <LayoutProvider>
           <Header />
           <Nav />
-          <ComponentTogether />
+          <ComponentTogether rerender={rerender} setRerender={setRerender} />
           <Plant />
           <Influence />
           <Footer />

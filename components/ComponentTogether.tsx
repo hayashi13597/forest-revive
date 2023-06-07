@@ -1,6 +1,6 @@
 "use client";
 import { IUserDonation } from "@/app/page";
-import React, { useEffect, useReducer } from "react";
+import React, { FC, useEffect, useReducer } from "react";
 import FormController from "./form";
 import LeaderBoard from "./board";
 import Momo from "./Momo";
@@ -14,28 +14,43 @@ const reducer = (
     initState?: IUserDonation[];
   }
 ) => {
+  console.log(action);
   switch (action.type) {
     case "add":
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case "update":
-      if (action.initState) return [...state, ...action.initState];
+      if (action.initState) return [...action.initState, ...action.payload];
   }
   return state;
 };
-const ComponentTogether = () => {
+
+interface ComponentTogetherProps {
+  setRerender(rerender: boolean): void;
+  rerender: boolean;
+}
+const ComponentTogether: FC<ComponentTogetherProps> = ({
+  setRerender,
+  rerender,
+}) => {
   const [state, dispatch] = useReducer(reducer, initState);
   useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
-      .then((data) =>
-        dispatch({ type: "update", payload: "", initState: data })
-      );
+      .then((data) => {
+        {
+          dispatch({ type: "update", payload: "", initState: data });
+        }
+      });
   }, []);
   return (
     <div>
-      <FormController dispatch={dispatch} />
+      <FormController
+        rerender={rerender}
+        setRerender={setRerender}
+        dispatch={dispatch}
+      />
       <LeaderBoard listUser={state} />
-      <Momo />
+      <Momo rerender={rerender} setRerender={setRerender} />
     </div>
   );
 };

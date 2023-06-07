@@ -19,106 +19,10 @@ const Footer = () => {
                 width={40}
                 height={40}
                 alt="social"
-                src="/images/reddit-icon.png"
-                className="mx-2 block w-10 h-10"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100093135552925"
-              target="_blank"
-              className="relative"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="social"
-                src="/images/instagram-icon.png"
-                className="mx-2 block w-10 h-10"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100093135552925"
-              target="_blank"
-              className="relative"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="social"
-                src="/images/twitter-icon.png"
-                className="mx-2 block w-10 h-10"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100093135552925"
-              target="_blank"
-              className="relative"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="social"
                 src="/images/facebook-icon.png"
                 className="mx-2 block w-10 h-10"
               />
             </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100093135552925"
-              target="_blank"
-              className="relative"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="social"
-                src="/images/tiktok-icon.png"
-                className="mx-2 block w-10 h-10"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100093135552925"
-              target="_blank"
-              className="relative"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="social"
-                src="/images/youtube-icon.png"
-                className="mx-2 block w-10 h-10"
-              />
-            </a>
-          </div>
-          <div className="mt-8 w-full max-w-screen-lg mx-auto">
-            <div className="social-wrap px-0 md:px-4 rounded overflow-hidden">
-              <div
-                className="tintup mx-auto"
-                data-id="teamtrees_1"
-                data-columns
-                data-expand="true"
-                data-infinitescroll="true"
-                data-personalization-id={1047512}
-                style={{
-                  height: "40vh",
-                  width: "100%",
-                  position: "relative",
-                }}
-                data-finishedloadingmoreposts="false"
-              >
-                <div
-                  className="a5b5e4-inner"
-                  style={{ height: "100%", width: "100%", overflow: "hidden" }}
-                >
-                  <iframe
-                    src="https://cdn.hypemarks.com/t/teamtrees_1?width=992&expand=true&infiniteScroll=true&personalization_id=1047512"
-                    style={{ border: "none", height: "100%", width: "100%" }}
-                    scrolling="yes"
-                    title="Social Feed"
-                    data-embed-id
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -154,7 +58,7 @@ const Footer = () => {
               Yêu cầu báo chí
             </a>
             <a
-              href=""
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >

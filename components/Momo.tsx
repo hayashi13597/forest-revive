@@ -1,8 +1,11 @@
 import { IUserDonation } from "@/app/page";
 import Image from "next/image";
-import React, { useEffect, useMemo, useState } from "react";
-
-const Momo = () => {
+import React, { FC, useEffect, useMemo, useState } from "react";
+interface MomoProps {
+  setRerender(rerender: boolean): void;
+  rerender: boolean;
+}
+const Momo: FC<MomoProps> = ({ rerender }) => {
   const [listDonation, setListDonations] = useState<IUserDonation[]>([]);
   const Sum = useMemo(() => {
     return listDonation.reduce(
@@ -19,10 +22,9 @@ const Momo = () => {
     (async () => {
       const res = await fetch("/api");
       const data = await res.json();
-
       setListDonations(data);
     })();
-  }, []);
+  }, [rerender]);
   return (
     <div id="top-up" className="flex justify-center text-white">
       <div className="w-[587px]  text-base pt-14 pb-4 px-8 text-left">

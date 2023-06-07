@@ -30,7 +30,7 @@ const Header = () => {
             Chung tay gây quỹ trồng 20.000 cây xanh đô thị chống biến đổi khí
             hậu và hạn chế ô nhiễm môi trường đồng hành cùng
             <a
-              href="https://www.arborday.org/"
+              href="https://greenviet.org/"
               className="font-black underline ml-2 inline-block"
               target="_blank"
             >

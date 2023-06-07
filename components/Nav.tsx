@@ -67,7 +67,7 @@ const Nav = () => {
             href="#planting-projects"
             className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
           >
-            Kế hoạch
+            Về chúng tôi
           </a>
         </div>
         <div className="transform -rotate-6  mt-12 flex flex-col items-center justify-center  w-64">
