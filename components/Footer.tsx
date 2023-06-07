@@ -11,7 +11,7 @@ const Footer = () => {
           </h3>
           <div className="flex flex-row items-center mt-4 justify-center">
             <a
-              href="https://reddit.com/r/teamtrees"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -24,7 +24,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com/teamtrees/"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -37,7 +37,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://twitter.com/teamtreesofficl"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -50,7 +50,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/teamtreesofficial/"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -63,7 +63,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://tiktok.com/@teamtreesofficial"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -76,7 +76,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.youtube.com/c/teamtrees"
+              href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"
               className="relative"
             >
@@ -142,13 +142,13 @@ const Footer = () => {
               FAQ
             </a>
             <a
-              href="mailto:info@teamtrees.org"
+              href="mailto:nguyenvantruonghh0405@gmail.com"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
               Liên hệ
             </a>
             <a
-              href="mailto:press@teamtrees.org"
+              href="mailto:nguyenvantruonghh0405@gmail.com"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
               Yêu cầu báo chí
@@ -158,7 +158,7 @@ const Footer = () => {
               target="_blank"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
-              #TeamSeas
+              #TeamTKWEB
             </a>
           </div>
         </div>
