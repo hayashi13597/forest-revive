@@ -143,9 +143,12 @@ const Blog = () => {
                       >
                         <th
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900  dark:text-white"
                         >
-                          {item.title}
+                          <div className="min-w-[150px] capitalize max-w-[200px]">
+                            {" "}
+                            {item.title}
+                          </div>
                         </th>
                         <td className="px-6 py-4">{item.description}</td>
                         <td className="px-6 py-4">

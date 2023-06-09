@@ -64,7 +64,7 @@ const Nav = () => {
             Truyền thông
           </a>
           <a
-            href="#planting-projects"
+            href="#history"
             className="block text-xl md:text-3xl text-white font-black uppercase mt-4"
           >
             Về chúng tôi

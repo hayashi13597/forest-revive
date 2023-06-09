@@ -23,7 +23,7 @@ const BlogContainer = () => {
   return (
     <>
       <h2 className="text-center font-bold text-2xl sm:text-5xl mb-4">
-        Về Chúng Tôi
+        TIN TỨC MỚI NHẤT
       </h2>
       <div
         id="planting-projects"

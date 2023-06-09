@@ -11,6 +11,7 @@ import LayoutProvider from "@/components/LayoutProvider";
 
 import ComponentTogether from "@/components/ComponentTogether";
 import { useState } from "react";
+import Introduction from "@/components/Introduction";
 export interface IUserDonation extends TypeAccount {
   amount: string;
   message: string;
@@ -32,6 +33,9 @@ export default function Home() {
           <Nav />
           <ComponentTogether rerender={rerender} setRerender={setRerender} />
           <Plant />
+          <div className="flex justify-center sm:w-[90%] w-[98%] mx-auto ">
+            <Introduction />
+          </div>
           <Influence />
           <Footer />
         </LayoutProvider>

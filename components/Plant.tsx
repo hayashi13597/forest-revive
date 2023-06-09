@@ -4,6 +4,7 @@ import dymamic from "next/dynamic";
 
 const LoadMap: any = dymamic(() => import("./LoadMap"), { ssr: false });
 import BlogContainer from "./blog";
+import Introduction from "./Introduction";
 
 const Plant = () => {
   return (
@@ -106,7 +107,7 @@ const Plant = () => {
         </Suspense>
       </div>
       <div className="flex justify-center mt-20">
-        <div className="w-[70%]">
+        <div className="sm:w-[70%] w-[90%]">
           <BlogContainer />
         </div>
       </div>

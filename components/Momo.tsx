@@ -74,16 +74,16 @@ const Momo: FC<MomoProps> = ({ rerender }) => {
             <span className="text-gray-400">GreenViet</span>
           </div>
         </section>
-        <div className="relative mb-[300px]">
+        <div className="relative sm:mb-[300px]">
           <Image
             src="/images/momo.png"
             width={759}
             height={454}
             alt="momo"
-            className="mt-2 w-full object-cover absolute inset-0"
+            className="mt-2 w-full object-cover absolute inset-0 sm:block hidden"
           />
-          <div className="absolute  right-12 top-16">
-            <div className="w-[195px] h-[188px] bg-red-600">
+          <div className="sm:absolute  sm:right-12 sm:top-16 flex justify-center mt-4 sm:mt-0">
+            <div className="w-[195px] h-[188px] ">
               <Image
                 src="/images/anhmomo.png"
                 alt="dasdsa"

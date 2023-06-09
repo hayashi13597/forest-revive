@@ -14,7 +14,7 @@ const BlogItem: FC<BlogItemPros> = ({ title, des, trees, plant, time }) => {
   return (
     <div className="w-full text-black">
       <div className="relative bg-white text-base rounded p-4 flex flex-col items-start mt-4">
-        <p className="text-lg font-black text-menu  capitalize text-left">
+        <p className="text-lg  font-black text-menu  capitalize text-left">
           {title}
         </p>
         {plant && <p className="text-sm  capitalize">{plant}</p>}
