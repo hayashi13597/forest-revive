@@ -1,8 +1,10 @@
 "use client";
 
 import Nav from "@/components/admin/Nav";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 interface IUsers {
   _id: string;
@@ -27,9 +29,18 @@ const Dashboard = () => {
       .then((data) => setUsers(data))
       .catch((err) => console.log(err));
   }, []);
+  const handleDelete = async (id: string) => {
+    const res = await axios.delete("/api", { params: { id } });
+    toast.success(res.data);
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setUsers(data))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
+      <Toaster />
       <Nav />
       <main className="p-4 md:p-10 mx-auto max-w-7xl">
         <p className="text-gray-700 text-2xl font-medium">Users</p>
@@ -85,6 +96,7 @@ const Dashboard = () => {
                     <th scope="col" className="px-6 py-3">
                       Message
                     </th>
+                    <th className="sr-only">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -103,6 +115,15 @@ const Dashboard = () => {
                         <td className="px-6 py-4">{item.email}</td>
                         <td className="px-6 py-4">{item.amount}</td>
                         <td className="px-6 py-4">{item.message}</td>
+                        <td>
+                          <button
+                            type="button"
+                            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+                            onClick={() => handleDelete(item._id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
                       </tr>
                     ))}
                 </tbody>

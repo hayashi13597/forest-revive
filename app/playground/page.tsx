@@ -11,7 +11,7 @@ const Playground = () => {
     fullname: "",
     email: "",
     amount: 0,
-    message: "Ủng hộ dự án",
+    message: "",
     totalPrice: 0,
   });
   const navigate = useRouter();
@@ -101,6 +101,7 @@ const Playground = () => {
                 placeholder="Nguyễn Văn xxx"
                 onChange={handleChange}
                 value={state.fullname}
+                required
               ></input>
             </div>
             <div className="mb-6">
@@ -119,6 +120,7 @@ const Playground = () => {
                 placeholder="nguyenvan@gmail.com"
                 onChange={handleChange}
                 value={state.email}
+                required
               ></input>
             </div>
             <div className="mb-6">
@@ -137,6 +139,7 @@ const Playground = () => {
                 placeholder="5"
                 onChange={handleChange}
                 value={state.amount}
+                required
               ></input>
             </div>
             <div className="mb-6">
@@ -154,6 +157,7 @@ const Playground = () => {
                 name="message"
                 onChange={handleChange}
                 value={state.message}
+                required
               ></textarea>
             </div>
             <button

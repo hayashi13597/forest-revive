@@ -39,7 +39,7 @@ const BlogItem: FC<BlogItemPros> = ({ title, des, trees, plant, time }) => {
             onClick={() => setIsViewDetail(!isViewDetail)}
             className="bg-primary/90 py-2 rounded-2xl  px-3 text-[#e6e3e3] text-xs hover:bg-primary"
           >
-            Xem thêm ...
+            {isViewDetail ? "Ẩn bớt" : "Xem thêm"}
           </button>
           {time && (
             <time className="text-xs">
