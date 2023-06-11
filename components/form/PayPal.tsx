@@ -49,7 +49,7 @@ const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
 
   const ZaloModal = () => {
     return (
-      <div className="fixed inset-0 !z-[999] bg-[rgba(17,50,89,0.6)] text-white flex items-center justify-center px-8 md:px-0">
+      <div className="fixed inset-0 !z-[9999] bg-[rgba(17,50,89,0.6)] text-white flex items-center justify-center px-8 md:px-0">
         <div className="relative">
           <Image
             src="/images/zalopay.jpg"
