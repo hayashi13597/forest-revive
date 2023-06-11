@@ -44,7 +44,7 @@ const BlogItem: FC<BlogItemPros> = ({ title, des, trees, plant, time }) => {
           {time && (
             <time className="text-xs">
               {" "}
-              {moment(time).format("DD/MM/YYYY")}
+              {moment(new Date(time)).format("DD/MM/YYYY")}
             </time>
           )}
         </p>

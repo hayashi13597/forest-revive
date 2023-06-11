@@ -16,7 +16,6 @@ const BlogContainer = () => {
     fetch("/api/blog")
       .then((res) => res.json())
       .then((data: IlistBlog[]) => {
-        console.log(data);
         setListBolg(data);
       });
   }, []);

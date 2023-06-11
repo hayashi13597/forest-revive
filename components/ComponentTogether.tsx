@@ -14,7 +14,6 @@ const reducer = (
     initState?: IUserDonation[];
   }
 ) => {
-  console.log(action);
   switch (action.type) {
     case "add":
       return [action.payload, ...state];
