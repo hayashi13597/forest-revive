@@ -30,7 +30,6 @@ const FormController: FC<FormControllerProps> = ({
   const handleSubmit = () => {
     const regex = /^[0-9]+$/;
     if (regex.test(amount)) {
-      console.log(amount, message);
       setIsShowPayMent(true);
       setErrors("");
     } else {

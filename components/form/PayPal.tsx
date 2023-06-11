@@ -49,14 +49,14 @@ const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
 
   const ZaloModal = () => {
     return (
-      <div className="fixed inset-0 !z-[999] bg-[rgba(17,50,89,0.6)] text-white flex items-center justify-center">
+      <div className="fixed inset-0 !z-[999] bg-[rgba(17,50,89,0.6)] text-white flex items-center justify-center px-8 md:px-0">
         <div className="relative">
           <Image
             src="/images/zalopay.jpg"
             width={400}
             height={800}
             className="object-cover"
-            alt="test"
+            alt="zalopay"
           />
           <button
             className="absolute -top-5 -right-3 text-2xl bg-[rgb(15,30,49)] w-10 h-10 rounded-full hover:bg-[rgb(17,50,89)]"
