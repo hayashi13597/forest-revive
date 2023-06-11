@@ -71,7 +71,10 @@ const FormController: FC<FormControllerProps> = ({
       });
   };
   return (
-    <section className="z-[999] relative text-center flex items-center w-full ">
+    <section
+      className="z-[999] relative text-center flex items-center w-full"
+      id="payment"
+    >
       <form
         className="w-[336px] m-auto bg-white shadow-lg rounded-2xl py-4 text-base"
         action=""

@@ -51,12 +51,12 @@ const Footer = () => {
             >
               Liên hệ
             </a>
-            <a
+            {/* <a
               href="mailto:nguyenvantruonghh0405@gmail.com"
               className="block mt-4 md:mt-0 px-4 text-white font-black"
             >
               Yêu cầu báo chí
-            </a>
+            </a> */}
             <a
               href="https://www.facebook.com/profile.php?id=100093135552925"
               target="_blank"

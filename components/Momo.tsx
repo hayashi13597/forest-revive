@@ -63,7 +63,10 @@ const Momo: FC<MomoProps> = ({ rerender }) => {
           </div>
           <hr className="h-2 bg-gray-600 " />
           <p className="mt-8 text-center">Đồng hành cùng dự án</p>
-          <div className="flex items-center justify-center  gap-2">
+          <div
+            className="flex items-center justify-center gap-2"
+            id="payment_momo"
+          >
             <Image
               src="/images/greenviet.png"
               width={85}
@@ -73,6 +76,13 @@ const Momo: FC<MomoProps> = ({ rerender }) => {
             />
             <span className="text-gray-400">GreenViet</span>
           </div>
+          <p className="text-center">Quyên góp trực tiếp dự án của GreenViet</p>
+          <p className="text-center">
+            Hoặc gián tiếp qua nhóm mình{" "}
+            <a className="text-primary" href="#payment">
+              tại đây
+            </a>
+          </p>
         </section>
         <div className="relative sm:mb-[300px]">
           <Image
@@ -85,7 +95,7 @@ const Momo: FC<MomoProps> = ({ rerender }) => {
           <div className="sm:absolute  sm:right-12 sm:top-16 flex justify-center mt-4 sm:mt-0">
             <div className="w-[195px] h-[188px] ">
               <Image
-                src="/images/anhmomo.png"
+                src="/images/greenViet_momo.jpg"
                 alt="dasdsa"
                 width={195}
                 height={188}

@@ -1,7 +1,8 @@
 "use client";
 import { PayPalButtons } from "@paypal/react-paypal-js";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { TypeAccount } from ".";
+import Image from "next/image";
 
 interface PayPalContainerProps {
   amount: number;
@@ -9,6 +10,7 @@ interface PayPalContainerProps {
 }
 
 const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
+  const [showZalo, setShowZalo] = useState<boolean>(false);
   let totalPrice = ((5 * amount) / 23).toFixed(2);
   const createOrder = (data: any, actions: any) => {
     return actions.order.create({
@@ -20,6 +22,11 @@ const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
         },
       ],
     });
+  };
+
+  const showZaloFn = (e: any) => {
+    e.preventDefault();
+    setShowZalo(!showZalo);
   };
 
   const onApprove = (data: any, actions: any) => {
@@ -40,7 +47,46 @@ const PayPalContainer: FC<PayPalContainerProps> = ({ amount, callback }) => {
     });
   };
 
-  return <PayPalButtons createOrder={createOrder} onApprove={onApprove} />;
+  const ZaloModal = () => {
+    return (
+      <div className="fixed inset-0 !z-[999] bg-[rgba(17,50,89,0.6)] text-white flex items-center justify-center">
+        <div className="relative">
+          <Image
+            src="/images/zalopay.jpg"
+            width={400}
+            height={800}
+            className="object-cover"
+            alt="test"
+          />
+          <button
+            className="absolute -top-5 -right-3 text-2xl bg-[rgb(15,30,49)] w-10 h-10 rounded-full hover:bg-[rgb(17,50,89)]"
+            onClick={showZaloFn}
+          >
+            X
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <>
+      <a
+        href="#payment_momo"
+        className="block py-2 w-full bg-momo hover:opacity-90 text-white text-bold my-4 rounded"
+      >
+        Momo
+      </a>
+      {showZalo && <ZaloModal />}
+      <button
+        className="block py-2 w-full bg-blue-500 hover:opacity-90 text-white text-bold my-4 rounded"
+        onClick={showZaloFn}
+      >
+        ZaloPay
+      </button>
+      <PayPalButtons createOrder={createOrder} onApprove={onApprove} />
+    </>
+  );
 };
 
 export default PayPalContainer;
