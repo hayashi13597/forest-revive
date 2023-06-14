@@ -32,6 +32,7 @@ const BlogContainer = () => {
           listBlog.map((item) => (
             <BlogItem
               key={item._id}
+              idItem={item._id}
               title={item.title}
               time={item.time || item.createdAt}
               des={item.description}

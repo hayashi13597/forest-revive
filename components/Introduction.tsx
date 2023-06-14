@@ -3,7 +3,7 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <section id="history" className="text-base text-[#e0dfdf] text-center">
+    <section id="history" className="text-base text-[#e0dfdf] text-center px-5">
       <h2 className="font-bold sm:text-5xl text-2xl mt-10">GIỚI THIỆU</h2>
       <figure className="flex justify-center">
         <Image

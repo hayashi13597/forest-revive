@@ -1,6 +1,7 @@
 "use client";
 import React, { FC, useState } from "react";
 interface BlogItemPros {
+  idItem: string;
   title: string;
   trees?: string;
   des: string;
@@ -9,11 +10,21 @@ interface BlogItemPros {
 }
 import "./blog.css";
 import moment from "moment";
-const BlogItem: FC<BlogItemPros> = ({ title, des, trees, plant, time }) => {
+const BlogItem: FC<BlogItemPros> = ({
+  idItem,
+  title,
+  des,
+  trees,
+  plant,
+  time,
+}) => {
   const [isViewDetail, setIsViewDetail] = useState(false);
   return (
     <div className="w-full text-black">
-      <div className="relative bg-white text-base rounded p-4 flex flex-col items-start mt-4">
+      <div
+        className="relative bg-white text-base rounded p-4 flex flex-col items-stretch mt-4"
+        id={idItem}
+      >
         <p className="text-lg  font-black text-menu  capitalize text-left">
           {title}
         </p>

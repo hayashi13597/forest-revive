@@ -72,7 +72,10 @@ const LoadMap = () => {
   const address3 = { lat: 10.7574319, lng: 106.6085853 };
 
   return (
-    <div id="planting-locations" className="md:w-2/3 sm:w-3/4 w-full z-[10]">
+    <div
+      id="planting-locations"
+      className="md:w-2/3 sm:w-3/4 w-full z-[10] px-2"
+    >
       {coordinates && location ? (
         <div>
           <MapContainer

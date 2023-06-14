@@ -51,7 +51,7 @@ const Header = () => {
                 width={300}
                 height={75}
                 src="/images/logologo.png"
-                className="h-8 md:h-20"
+                className="object-cover md:h-75 md:w-300"
               />
             </div>
           </div>

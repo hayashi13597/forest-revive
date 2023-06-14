@@ -17,7 +17,7 @@ const LeaderBoard: FC<LeaderBoardProps> = ({ listUser }) => {
     page * limitPage
   );
   return (
-    <section id="section-donate" className="mt-20 text-center">
+    <section id="section-donate" className="mt-20 text-center px-4">
       <h1 className="text-white  text-2xl sm:text-4xl mb-16 font-bold ">
         Danh sách người ủng hộ
       </h1>

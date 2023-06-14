@@ -8,7 +8,7 @@ const Influence = () => {
   return (
     <>
       <div className="flex justify-center w-screen mt-4">
-        <section className="min-w-[800px]">
+        <section className="max-w-[800px] md:min-w-[800px]">
           <Card
             component="li"
             sx={{ minWidth: 300, minHeight: 500, flexGrow: 1 }}

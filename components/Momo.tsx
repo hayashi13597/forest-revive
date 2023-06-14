@@ -76,7 +76,16 @@ const Momo: FC<MomoProps> = ({ rerender }) => {
             />
             <span className="text-gray-400">GreenViet</span>
           </div>
-          <p className="text-center">Quyên góp trực tiếp dự án của GreenViet</p>
+          <p className="text-center">
+            Quyên góp trực tiếp dự án của{" "}
+            <a
+              className="text-primary font-semibold"
+              href="https://greenviet.org/"
+              target="_blank"
+            >
+              GreenViet
+            </a>
+          </p>
           <p className="text-center">
             Hoặc gián tiếp qua nhóm mình{" "}
             <a className="text-primary" href="#payment">
