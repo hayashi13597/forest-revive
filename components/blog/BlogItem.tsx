@@ -42,9 +42,8 @@ const BlogItem: FC<BlogItemPros> = ({
           className={`mt-4 text-sm text-left ease-in-out duration-300 text_over-effect  ${
             isViewDetail ? "hidden_effect" : " line-clamp-3"
           }`}
-        >
-          {des}
-        </p>
+             dangerouslySetInnerHTML={{__html: des}}
+        />
         <p className="mt-2 flex justify-between items-center w-full">
           <button
             onClick={() => setIsViewDetail(!isViewDetail)}
